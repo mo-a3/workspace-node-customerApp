@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script
+  src="https://code.jquery.com/jquery-3.6.4.min.js"
+  integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+  crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+        dologin = function(){
+            var username = $("#username").val();
+            var pass = $("#password").val();
+            if(username==pass){
+                location="/dashboard";
+            }else{
+                alert("username incorrect")
+            }
+            console.log("clicked")
+        }
+
+        // var dologin = function(){
+        //     var username = $("#username").val();
+        //     var pass = $("#password").val();
+        //     var data = {username:username,password:pass};
+        //     $.ajax({
+        //         url:"/user/authenticate",
+        //         type:"POST",
+        //         data :data,
+
+        //     })
+        // }
+
+    </script>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <input id="username" type="" name="" placeholder="username"></br></br>
+    <input id="password" type="password" name="" placeholder="password"></br></br>
+    <input type="button" onclick="dologin()" name=""  value="LOGIN"></br>
+  </body>
+</html>

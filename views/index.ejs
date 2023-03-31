@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <script type="text/javascript">
+      goLocation = function(nextLocation){
+        location = "/"+nextLocation
+      }
+    </script>
+    <h1><%= title %></h1>
+    
+
+    <button onclick="goLocation('dashboard')">Dashboard</button>|
+    <button onclick="goLocation('customer')">Customer</button>|
+    <button onclick="goLocation('about')">About</button>|
+    <button onclick="goLocation('login')">Logout</button>
+    <p>Welcome to <%= title %></p>
+  </body>
+</html>
